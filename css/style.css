@@ -1,0 +1,176 @@
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --body-size: 1.8rem;
+  --head1-size: 2.4rem;
+  --font: "Outfit", sans-serif;
+}
+
+/* 
+ -----------
+ #Global
+------------
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  height: 100%;
+  margin-block: 4rem;
+}
+
+body {
+  background-color: var(--Very-dark-blue-main-BG);
+  font-size: var(--body-size);
+  padding: 2rem;
+  color: var(--Soft-blue);
+  font-family: var(--font);
+  height: 100vh;
+}
+
+a {
+  color: currentColor;
+}
+
+/* 
+---------
+ #Card
+---------
+ */
+
+.card {
+  max-width: 37rem;
+  border-radius: 10px;
+  padding: 2.5rem;
+}
+
+.card--bg {
+  background-color: var(--Very-dark-blue-card-BG);
+}
+
+.card__image {
+  max-width: 100%;
+  margin-block-end: 3rem;
+}
+
+.card__content {
+  margin-block-end: 2rem;
+  border-block-end: 1px solid var(--Very-dark-blue-line);
+}
+
+.card__description {
+  margin-block-end: 2rem;
+  font-weight: 300;
+}
+
+.card__title {
+  margin-block-end: 2rem;
+  font-weight: 600;
+}
+
+.card__title:hover {
+  color: var(--Cyan);
+}
+
+.card__price-detail {
+  margin-block-end: 1.8rem;
+  font-weight: 400;
+}
+
+.avatar__photo {
+  max-inline-size: 3.8rem;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+  vertical-align: middle;
+}
+
+.avatar__name {
+  font-weight: 400;
+}
+
+.avatar__link:hover {
+  color: var(--Cyan);
+}
+
+.icon {
+  margin-inline-end: 0.3rem;
+  vertical-align: bottom;
+  height: 1.9rem;
+}
+
+/*
+---------------
+ #Utilities
+---------------
+ */
+
+.flex {
+  display: flex;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.flex-align {
+  align-items: center;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.secondary-color {
+  color: var(--White);
+}
+
+.primary-color {
+  color: var(--Cyan);
+}
+
+.is-center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-at-the-bottom {
+  margin-block-start: auto;
+}
+
+/* 
+--------------
+ #Attribution
+--------------
+ */
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  padding-block-end: 3rem;
+}
+
+.attribution__link,
+.attribution__name {
+  color: hsl(228, 83%, 59%);
+}
