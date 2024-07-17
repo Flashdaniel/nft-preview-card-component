@@ -44,13 +44,13 @@ a {
 }
 
 /* 
----------
- #Card
----------
+--------------------
+ #Block & Element
+--------------------
  */
 
 .card {
-  max-width: 37rem;
+  max-width: 35rem;
   border-radius: 10px;
   padding: 2.5rem;
 }
@@ -59,9 +59,32 @@ a {
   background-color: var(--Very-dark-blue-card-BG);
 }
 
+.card__image-link {
+  display: block;
+  position: relative;
+  margin-block-end: 3rem;
+}
+
+/* use as a hack to display the eye-shape block on hover */
+.card__image-link:hover {
+  --deplay-eye: block;
+}
+
+.card__image-link:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: var(--Cyan);
+  opacity: 0.5;
+}
+
 .card__image {
   max-width: 100%;
-  margin-block-end: 3rem;
+  border-radius: 10px;
 }
 
 .card__content {
@@ -70,8 +93,9 @@ a {
 }
 
 .card__description {
-  margin-block-end: 2rem;
+  margin-block-end: 2.5rem;
   font-weight: 300;
+  line-height: 1.5;
 }
 
 .card__title {
@@ -109,11 +133,55 @@ a {
   height: 1.9rem;
 }
 
+.eye-shape {
+  position: relative;
+  display: var(--deplay-eye, none);
+  margin: 0 auto;
+  width: 43px;
+  height: 43px;
+  background-color: var(--White);
+  border-radius: 70% 6px;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+.eye-shape::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 9.4px;
+  left: 9px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 6px solid #0ea3a3f5;
+  background-color: var(--White);
+}
+
 /*
 ---------------
  #Utilities
 ---------------
  */
+
+/* use to place the eye-shape above the card_image */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* card_image */
+.grid-item1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* eye-shape */
+.grid-item2 {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+}
 
 .flex {
   display: flex;
