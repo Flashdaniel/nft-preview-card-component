@@ -18,48 +18,74 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | NFT preview card component</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <main>
+  <body class="flex flex-direction-column gap-2">
+    <main class="is-center-box">
       <!-- card start -->
-      <article class="card">
-        <img
-          src="images/image-equilibrium.jpg"
-          alt="NFT Equilibrium image"
-          class="card__image"
-        />
+      <article class="card card--bg">
+        <a href="/" class="card__image-link"
+          ><img
+            src="images/image-equilibrium.jpg"
+            alt="NFT Equilibrium image"
+            class="card__image"
+          />
+        </a>
 
         <div class="card__content">
-          <h1 class="card__title">Equilibrium #3429</h1>
+          <h1 class="card__title secondary-color">
+            <a href="/" class="text-decoration-none">Equilibrium #3429</a>
+          </h1>
           <p class="card__description">
             Our Equilibrium collection promotes balance and calm.
           </p>
-          <div class="card__price-detail">
-            <p class="card__price">0.041 ETH</p>
-            <time datetime="" class="card__time">3 days left</time>
+          <div class="card__price-detail flex space-between flex-align">
+            <p class="card__price primary-color">
+              <img src="images/icon-ethereum.svg" alt="" class="icon" /> 0.041
+              ETH
+            </p>
+            <time datetime="" class="card__time"
+              ><img src="images/icon-clock.svg" alt="" class="icon" /> 3 days
+              left</time
+            >
           </div>
         </div>
 
-        <div class="avatar">
+        <div class="avatar flex gap-2 flex-align">
           <img
             src="images/image-avatar.png"
             alt="Jules Wyvern look weird in dark room and ray of light on half of the face"
             class="avatar__photo"
           />
-          <p class="avatar__name">Creation of Jules Wyvern</p>
+          <p class="avatar__name">
+            Creation of
+            <a
+              href="/"
+              class="avatar__link text-decoration-none secondary-color"
+              >Jules Wyvern</a
+            >
+          </p>
         </div>
       </article>
       <!-- card end -->
     </main>
 
-    <footer class="attribution">
+    <footer class="attribution is-at-the-bottom">
       <p>
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          class="attribution__link"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="#" class="attribution__name">Nweze Daniel</a>.
       </p>
     </footer>
   </body>
